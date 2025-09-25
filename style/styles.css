@@ -1,5 +1,5 @@
 body {
-  font-family: "Segoe UI";
+  font-family: "sans-serif";
   margin: 0;
   padding: 0;
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -64,18 +64,18 @@ body {
   margin-top: 50px;
 }
 
-.main-profile {
+.content-section {
   padding: 40px;
   max-width: 900px;
   margin: 0 auto;
 }
 
-.profile-header {
+.section-header {
   text-align: center;
   margin-bottom: 40px;
 }
 
-.profile-title {
+.section-title {
   font-size: 32px;
   color: #2c3e50;
   margin-bottom: 10px;
@@ -151,26 +151,139 @@ body {
 }
 
 .experience-card {
-  background: white; 
-  padding: 25px; 
-  margin: 20px 0; 
-  border-radius: 12px; 
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08); 
-  border-left: 4px solid #667eea; 
-  transition: transform 0.3s ease; 
+  background: white;
+  padding: 25px;
+  margin: 20px 0;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  border-left: 4px solid #667eea;
+  transition: transform 0.3s ease;
 }
 .experience-card:hover {
-  transform: translateX(5px); 
+  transform: translateX(5px);
 }
 
 .experience-title {
-font-size: 20px; 
-color: #2c3e50; 
-margin: 0 0 10px 0;
-font-weight: 600; 
+  font-size: 20px;
+  color: #2c3e50;
+  margin: 0 0 10px 0;
+  font-weight: 600;
 }
 .experience-desc {
-color: #7f8c8d; 
-line-height: 1.6;
-margin: 0; 
+  color: #7f8c8d;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.news-card-section {
+  margin-top: 50px;
+}
+
+.news-card {
+  background-color: white;
+  padding: 25px;
+  margin: 20px 0;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  border-left: 4px solid #667eea;
+  border-radius: 12px;
+}
+
+.news-title {
+  font-size: 24px;
+  color: #2c3e50;
+  margin: 0 0 10px 0;
+  font-weight: 600;
+}
+
+.news-author {
+  font-size: 14px;
+  color: #9b9c9d;
+  margin: 0 0 10px 0;
+  font-weight: 400;
+}
+
+.news-desc {
+  font-size: 16px;
+  color: #5e646a;
+  line-height: 1.6;
+  margin: 0;
+  font-weight: 400;
+}
+
+.product-section {
+  margin: 50px 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+
+.product-card {
+  padding: 25px;
+  background-color: white;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+}
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+.product-photo {
+  width: 250px;
+  height: 280px;
+  border-radius: 15px;
+  object-fit: contain;
+  margin: 20px auto;
+}
+
+.product-title {
+  font-size: 20px;
+  color: #24303d;
+  margin: 0 0 10px 0;
+  font-weight: 400;
+}
+
+.product-desc {
+  font-size: 16px;
+  color: #161b20;
+  margin: 0 0 10px 0;
+  font-weight: 300;
+}
+
+.contact-card-section {
+  margin-top: 50px;
+}
+
+.contact-card {
+  margin: 0;
+  padding: 25px;
+  margin: 30px 0;
+  background-color: rgb(236, 236, 236);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  border-radius: 12px;
+}
+
+.contact-desc {
+  text-align: center;
+  font-size: 18px;
+  color: #374350;
+  font-weight: 500;
+}
+
+.contact-button {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 15px 40px;
+  font-size: 16px;
+  border: none;
+  color: white;
+  cursor: pointer;
+  margin-top: 20px;
+  font-weight: 600;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+}
+
+.contact-button:hover {
+  transform: translateY(-5px);
 }
