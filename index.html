@@ -4,49 +4,67 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Семестровая работа</title>
+    <link rel="stylesheet" href="style/styles.css" />
   </head>
   <body>
-    <header class="main-header">Хэдер</header>
-    <nav class="main-nav">
-      <ul class="list">
-        <li class="item">
-          <a href="index.html" class="link"> Главная </a>
-        </li>
-        <li class="item">
-          <a href="./pages/news.html" class="link"> Новости </a>
-        </li>
-        <li class="item">
-          <a href="./pages/practices.html" class="link"> Практики </a>
-        </li>
-        <li class="item">
-          <a href="./pages/goods.html" class="link"> Товары </a>
-        </li>
-        <li class="item">
-          <a href="./pages/contacts.html" class="link"> Контакты </a>
-        </li>
-      </ul>
-    </nav>
-    <div class="main-profile">
-      <p class="profile-title">Информация об авторе</p>
-      <img src="assets/images/account-photo.jpg" alt="Фото автора" width="200" height="250">
-      <p class="profile_full-name">Пучко Денис Вадимович</p>
-      <p class="profile_group">ЭФБО-02-24</p>
-      <div class="about-me">
-        <p>Обо мне:</p>
+    <div class="page-container">
+      <header class="main-header">Хэдер</header>
+      <nav class="main-nav">
+        <ul class="list">
+          <li class="item">
+            <a href="index.html" class="link"> Главная </a>
+          </li>
+          <li class="item">
+            <a href="./pages/news.html" class="link"> Новости </a>
+          </li>
+          <li class="item">
+            <a href="./pages/practices.html" class="link"> Практики </a>
+          </li>
+          <li class="item">
+            <a href="./pages/goods.html" class="link"> Товары </a>
+          </li>
+          <li class="item">
+            <a href="./pages/contacts.html" class="link"> Контакты </a>
+          </li>
+        </ul>
+      </nav>
+      <div class="content-section">
+        <div class="section-header">
+            <p class="section-title">Информация об авторе</p>
+            <img
+            src="assets/images/account-photo.jpg"
+            alt="Фото автора"
+            class="profile-photo"
+            />
+            <p class="profile-name">Пучко Денис Вадимович</p>
+            <p class="profile-group">ЭФБО-02-24</p>
+        </div>
+        <div class="about-me">
+            Обо мне: Я родился в Самаре. Ходил. Бродил. Оп в Москве. Хожу теперь тут.
+        </div>
+        <div class="skills-section">
+          <div class="skill-tag">Навык 1</div>
+          <div class="skill-tag">Навык 2</div>
+          <div class="skill-tag">Навык 3</div>
+          <div class="skill-tag">Навык 4</div>
+        </div>
+        <div class="experience-section">
+          <p class="experience-header">Мой опыт работы</p>
+          <div class="experience-card">
+            <h3 class="experience-title">Опыт 1</h3>
+            <p class="experience-desc">Опыт 1</p>
+          </div>
+          <div class="experience-card">
+            <h3 class="experience-title">Опыт 2</h3>
+            <p class="experience-desc">Опыт 2</p>
+          </div>
+          <div class="experience-card">
+            <h3 class="experience-title">Опыт 3</h3>
+            <p class="experience-desc">Опыт 3</p>
+          </div>        
+        </div>
       </div>
-      <div class="skills-section">
-        <div class="skill-tag">Навык 1</div>
-        <div class="skill-tag">Навык 2</div>
-        <div class="skill-tag">Навык 3</div>
-        <div class="skill-tag">Навык 4</div>
-      </div>
-      <div class="experience-section">
-        <p class="experience-title">Мой опыт работы</p>
-        <div class="experience-card">Опыт 1</div>
-        <div class="experience-card">Опыт 2</div>
-        <div class="experience-card">Опыт 3</div>
-      </div>
+      <footer class="main-footer">Футер</footer>
     </div>
-    <footer class="main-footer">Футер</footer>
   </body>
 </html>
