@@ -1,53 +1,166 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Семестровая работа</title>
     <link rel="stylesheet" href="../style/styles.css" />
+    <link rel="stylesheet" href="../style/modal.css" />
   </head>
   <body>
-    <div class="page-container">
-      <header class="main-header">Хэдер</header>
-      <nav class="main-nav">
-        <ul class="list">
-          <li class="item">
-            <a href="../index.html" class="link"> Главная </a>
+    <div class="page">
+      <header class="header">
+        <h2 class="header__title">Контакты</h2>
+      </header>
+      <nav class="nav">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a href="../index.html" class="nav__link"> Главная </a>
           </li>
-          <li class="item">
-            <a href="news.html" class="link"> Новости </a>
+          <li class="nav__item">
+            <a href="news.html" class="nav__link"> Новости </a>
           </li>
-          <li class="item">
-            <a href="practices.html" class="link"> Практики </a>
+          <li class="nav__item">
+            <a href="practices.html" class="nav__link"> Практики </a>
           </li>
-          <li class="item">
-            <a href="goods.html" class="link"> Товары </a>
+          <li class="nav__item">
+            <a href="goods.html" class="nav__link"> Товары </a>
           </li>
-          <li class="item">
-            <a href="contacts.html" class="link"> Контакты </a>
+          <li class="nav__item">
+            <a href="contacts.html" class="nav__link"> Контакты </a>
           </li>
         </ul>
       </nav>
-      <div class="content-section">
-        <div class="section-header">
-          <h2 class="section-title">Контакты</h2>
+      <main class="main">
+        <article class="profile">
+          <h1 class="section__title">Наши контакты</h1>
+          
+          <section class="contact-card-section">
+              <div class="contact-info">
+                <h3 class="contact-card__title">Электронная почта</h3>
+                <p class="contact-card__desc">Адрес электронной почты: kachanova.21@mail.ru</p>
+              </div>
+              <div class="contact-info">
+                <h3 class="contact-card__title">Физический адрес</h3>
+                <p class="contact-card__desc">Адрес: г. Москва, ул. 11-Парковая, д. 36</p>
+              </div>
+              <div class="contacts__grid">
+                <div class="contact-item">
+                  <h3 class="contact-card__title">Телефон</h3>
+                  <p class="contact-card__desc">+7 (495) 123-45-67</p>
+                </div>
+                <div class="contact-item">
+                  <h3 class="contact-card__title">Время работы</h3>
+                  <p class="contact-card__desc">Пн-Пт: 9:00-18:00</p>
+                </div>
+                <div class="contact-item">
+                  <h3 class="contact-card__title">Социальные сети</h3>
+                  <p class="contact-card__desc">VK, Telegram, WhatsApp</p>
+                </div>
+            </div>
+            <button class="contact-button" onclick="contactDialog.showModal()">Связаться с нами</button>
+          </section>
+        </article>
+      </main>
+      <footer class="footer">
+        <p class="footer__text">© 2025 Все права защищены. Контактная информация</p>
+      </footer>
 
-          <div class="contact-card-section">
-            <div class="contact-card">
-              <p class="contact-desc">
-                Адрес электронной почты: kachanova.21@mail.ru
-              </p>
-            </div>
-            <div class="contact-card">
-              <p class="contact-desc">
-                Адрес: г. Москва, ул. 11-Парковая, д. 36
-              </p>
-            </div>
-            <button class="contact-button">Позвоните мне</button>
-          </div>
+      <dialog class="dialog" id="contactDialog">
+        <div class="dialog__header">
+          <h2 class="dialog__title">Форма обратной связи</h2>
         </div>
-      </div>
-      <footer class="main-footer">Футер</footer>
+
+        <div class="dialog__content">
+          <form class="form" id="feedbackForm" method="dialog">
+            <div class="form__group">
+              <label for="name" class="form__label">
+                Имя <span class="form__required">*</span>
+              </label>
+              <input type="text" id="name" name="name" class="form__input" required placeholder="Введите ваше имя">
+            </div>
+
+            <div class="form__group">
+              <label for="phone" class="form__label">
+                Телефон <span class="form__required">*</span>
+              </label>
+              <input type="tel" id="phone" name="phone" class="form__input" required placeholder="+7 (XXX) XXX-XX-XX">
+            </div>
+
+            <div class="form__group">
+              <label for="email" class="form__label">
+                Электронная почта <span class="form__required">*</span>
+              </label>
+              <input type="email" id="email" name="email" class="form__input" required placeholder="example@mail.ru">
+            </div>
+
+            <div class="form__group">
+              <label for="category" class="form__label">
+                Категория обращения <span class="form__required">*</span>
+              </label>
+              <select id="category" name="category" class="form__select" required>
+                <option value="">Выберите категорию</option>
+                <option value="technical">Техническая поддержка</option>
+                <option value="commercial">Коммерческое предложение</option>
+                <option value="cooperation">Сотрудничество</option>
+                <option value="complaint">Жалоба</option>
+                <option value="suggestion">Предложение</option>
+                <option value="other">Другое</option>
+              </select>
+            </div>
+
+            <div class="form__group">
+              <label for="message" class="form__label">
+                Текст обращения <span class="form__required">*</span>
+              </label>
+              <textarea id="message" name="message" class="form__textarea" required placeholder="Опишите вашу проблему или вопрос..."></textarea>
+            </div>
+
+            <div class="dialog__actions">
+              <button type="submit" class="btn btn--secondary">Отмена</button>
+              <button type="button" class="btn btn--primary" onclick="submitForm()">Отправить</button>
+            </div>
+          </form>
+        </div>
+      </dialog>
+
+      <script>
+        function submitForm() {
+          const form = document.getElementById('feedbackForm');
+          const formData = new FormData(form);
+
+          if (!form.checkValidity()) {
+            form.reportValidity();
+            return;
+          }
+
+          const data = {
+            name: formData.get('name'),
+            phone: formData.get('phone'),
+            email: formData.get('email'),
+            category: formData.get('category'),
+            message: formData.get('message')
+          };
+
+          alert('Спасибо! Ваше обращение отправлено. Мы свяжемся с вами в ближайшее время.');
+
+          contactDialog.close();
+
+          form.reset();
+        }
+
+        document.getElementById('contactDialog').addEventListener('click', function(event) {
+          if (event.target === this) {
+            this.close();
+          }
+        });
+
+        document.getElementById('feedbackForm').addEventListener('keypress', function(event) {
+          if (event.key === 'Enter' && event.target.type !== 'textarea') {
+            event.preventDefault();
+          }
+        });
+      </script>
     </div>
   </body>
 </html>

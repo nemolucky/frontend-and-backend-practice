@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,62 +7,69 @@
     <link rel="stylesheet" href="../style/styles.css" />
   </head>
   <body>
-    <div class="page-container">
-      <header class="main-header">Хэдер</header>
-      <nav class="main-nav">
-        <ul class="list">
-          <li class="item">
-            <a href="../index.html" class="link"> Главная </a>
+    <div class="page">
+      <header class="header">
+        <h2 class="header__title">Товары</h2>
+      </header>
+      <nav class="nav">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a href="../index.html" class="nav__link"> Главная </a>
           </li>
-          <li class="item">
-            <a href="news.html" class="link"> Новости </a>
+          <li class="nav__item">
+            <a href="news.html" class="nav__link"> Новости </a>
           </li>
-          <li class="item">
-            <a href="practices.html" class="link"> Практики </a>
+          <li class="nav__item">
+            <a href="practices.html" class="nav__link"> Практики </a>
           </li>
-          <li class="item">
-            <a href="goods.html" class="link"> Товары </a>
+          <li class="nav__item">
+            <a href="goods.html" class="nav__link"> Товары </a>
           </li>
-          <li class="item">
-            <a href="contacts.html" class="link"> Контакты </a>
+          <li class="nav__item">
+            <a href="contacts.html" class="nav__link"> Контакты </a>
           </li>
         </ul>
       </nav>
-      <div class="content-section">
-        <div class="section-header">
-          <h2 class="section-title">Мои товары</h2>
-        </div>
-        <div class="product-section">
-          <div class="product-card">
-            <img
-              src="../assets/images/keyboard.jpg"
-              alt="Фото товара"
-              class="product-photo"
-            />
-            <h3 class="product-title">Клавиатура</h3>
-            <p class="product-price">Цена товара: 3300 р</p>
+      <main class="main">
+        <section class="product-section">
+          <article class="profile">
+            <h1 class="section__title">Мои товары</h1>
+          </article>
+          <p class="section__description">Я предлагаю широкий ассортимент качественных товаров по доступным ценам</p>
+          <div class="product__grid">
+            <div class="product-card">
+              <img
+                src="../assets/images/keyboard.jpg"
+                alt="Фото товара"
+                class="product-card__image"
+              />
+              <h3 class="product-card__title">Клавиатура</h3>
+              <p class="product-card__price">Цена товара: 3300 р</p>
+            </div>
+            <div class="product-card">
+              <img
+                src="../assets/images/monitor.jpg"
+                alt="Фото товара"
+                class="product-card__image"
+              />
+              <h3 class="product-card__title">Монитор</h3>
+              <p class="product-card__price">Цена товара: 9900 р</p>
+            </div>
+            <div class="product-card">
+              <img
+                src="../assets/images/mouse.jpg"
+                alt="Фото товара"
+                class="product-card__image"
+              />
+              <h3 class="product-card__title">Мышка</h3>
+              <p class="product-card__price">Цена товара: 2200 р</p>
+            </div>
           </div>
-          <div class="product-card">
-            <img
-              src="../assets/images/monitor.jpg"
-              alt="Фото товара"
-              class="product-photo"
-            />
-            <h3 class="product-title">Монитор</h3>
-            <p class="product-price">Цена товара: 9900 р</p>
-          </div>
-          <div class="product-card">
-            <img
-              src="../assets/images/mouse.jpg"
-              alt="Фото товара"
-              class="product-photo"
-            />
-            <h3 class="product-title">Мышка</h3>
-            <p class="product-price">Цена товара: 2200 р</p>
-          </div>
-        </div>
-      </div>
-      <footer class="main-footer">Футер</footer>
+        </section>
+      </main>
+      <footer class="footer">
+        <p class="footer__text">© 2025 Интернет-магазин. Все права защищены.</p>
+      </footer>
     </div>
   </body>
 </html>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,64 +7,82 @@
     <link rel="stylesheet" href="style/styles.css" />
   </head>
   <body>
-    <div class="page-container">
-      <header class="main-header">Хэдер</header>
-      <nav class="main-nav">
-        <ul class="list">
-          <li class="item">
-            <a href="index.html" class="link"> Главная </a>
+    <div class="page">
+      <header class="header">
+        <h2 class="header__title">Хэдер</h2>
+      </header>
+      
+      <nav class="nav">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a href="index.html" class="nav__link"> Главная </a>
           </li>
-          <li class="item">
-            <a href="./pages/news.html" class="link"> Новости </a>
+          <li class="nav__item">
+            <a href="./pages/news.html" class="nav__link"> Новости </a>
           </li>
-          <li class="item">
-            <a href="./pages/practices.html" class="link"> Практики </a>
+          <li class="nav__item">
+            <a href="./pages/practices.html" class="nav__link"> Практики </a>
           </li>
-          <li class="item">
-            <a href="./pages/goods.html" class="link"> Товары </a>
+          <li class="nav__item">
+            <a href="./pages/goods.html" class="nav__link"> Товары </a>
           </li>
-          <li class="item">
-            <a href="./pages/contacts.html" class="link"> Контакты </a>
+          <li class="nav__item">
+            <a href="./pages/contacts.html" class="nav__link"> Контакты </a>
           </li>
         </ul>
       </nav>
-      <div class="content-section">
-        <div class="section-header">
-            <p class="section-title">Информация об авторе</p>
-            <img
+      
+      <main class="main">
+        <article class="profile">
+          <h1 class="profile__title">Информация об авторе</h1>
+          <img
             src="assets/images/account-photo.jpg"
             alt="Фото автора"
-            class="profile-photo"
-            />
-            <p class="profile-name">Пучко Денис Вадимович</p>
-            <p class="profile-group">ЭФБО-02-24</p>
-        </div>
-        <div class="about-me">
-            Обо мне: Я родился в Самаре. Ходил. Бродил. Оп в Москве. Хожу теперь тут.
-        </div>
-        <div class="skills-section">
-          <div class="skill-tag">Разработка кроссплатформенных приложений на Flutter (Dart)</div>
-          <div class="skill-tag">Backend-разработка на C# и .NET</div>
-          <div class="skill-tag">Работа с базами данных</div>
-          <div class="skill-tag">Системы контроля версий и CI/CD</div>
-        </div>
-        <div class="experience-section">
-          <p class="experience-header">Мой опыт работы</p>
-          <div class="experience-card">
-            <h3 class="experience-title">Разработчик мобильных приложений (Flutter)</h3>
-            <p class="experience-desc">Полный цикл разработки с нуля двух кроссплатформенных приложений для стартапов, которые были успешно опубликованы в AppStore и Google Play.</p>
+            class="profile__photo"
+          />
+          <h2 class="profile__name">Пучко Денис Вадимович</h2>
+          <p class="profile__group">ЭФБО-02-24</p>
+        </article>
+        
+        <section class="about">
+          <h2 class="about__title">Обо мне</h2>
+          <p class="about__text">Обо мне: Я родился в Самаре. Ходил. Бродил. Оп в Москве. Хожу теперь тут.</p>
+        </section>
+        
+        <section class="skills">
+          <h2 class="skills__title">Мои навыки</h2>
+          <div class="skills__grid">
+            <div class="skill-tag">Разработка кроссплатформенных приложений на Flutter (Dart)</div>
+            <div class="skill-tag">Backend-разработка на C# и .NET</div>
+            <div class="skill-tag">Работа с базами данных</div>
+            <div class="skill-tag">Системы контроля версий и CI/CD</div>
           </div>
-          <div class="experience-card">
-            <h3 class="experience-title">Fullstack Developer (C# / .NET + Flutter)</h3>
-            <p class="experience-desc">Разработка и поддержка backend-части на ASP.NET Core для внутренней системы управления предприятием, включая проектирование API и работу с базой данных MS SQL.</p>
-          </div>
-          <div class="experience-card">
-            <h3 class="experience-title">Стажер-программист C#</h3>
-            <p class="experience-desc">Участие в разработке модулей для десктопного приложения на WPF.</p>
+        </section>
+        
+        <section class="experience">
+          <article class="profile">
+            <h2 class="section__title">Мой опыт работы</h2>
+          </article>
+          <div class="experience__grid">
+            <div class="experience-card">
+              <h3 class="experience-card__title">Разработчик мобильных приложений (Flutter)</h3>
+              <p class="experience-card__desc">Полный цикл разработки с нуля двух кроссплатформенных приложений для стартапов, которые были успешно опубликованы в AppStore и Google Play.</p>
+            </div>
+            <div class="experience-card">
+              <h3 class="experience-card__title">Fullstack Developer (C# / .NET + Flutter)</h3>
+              <p class="experience-card__desc">Разработка и поддержка backend-части на ASP.NET Core для внутренней системы управления предприятием, включая проектирование API и работу с базой данных MS SQL.</p>
+            </div>
+            <div class="experience-card">
+              <h3 class="experience-card__title">Стажер-программист C#</h3>
+              <p class="experience-card__desc">Участие в разработке модулей для десктопного приложения на WPF.</p>
+            </div>
           </div>        
-        </div>
-      </div>
-      <footer class="main-footer">Футер</footer>
+        </section>
+      </main>
+      
+      <footer class="footer">
+        <p class="footer__text">© 2025 Все права защищены.</p>
+      </footer>
     </div>
   </body>
 </html>
