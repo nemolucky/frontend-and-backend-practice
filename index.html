@@ -1,88 +1,191 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Семестровая работа</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="style/styles.css" />
-  </head>
-  <body>
-    <div class="page">
-      <header class="header">
-        <h2 class="header__title">Хэдер</h2>
-      </header>
-      
-      <nav class="nav">
-        <ul class="nav__list">
-          <li class="nav__item">
-            <a href="index.html" class="nav__link"> Главная </a>
-          </li>
-          <li class="nav__item">
-            <a href="./pages/news.html" class="nav__link"> Новости </a>
-          </li>
-          <li class="nav__item">
-            <a href="./pages/practices.html" class="nav__link"> Практики </a>
-          </li>
-          <li class="nav__item">
-            <a href="./pages/goods.html" class="nav__link"> Товары </a>
-          </li>
-          <li class="nav__item">
-            <a href="./pages/contacts.html" class="nav__link"> Контакты </a>
-          </li>
-        </ul>
-      </nav>
-      
-      <main class="main">
-        <article class="profile">
-          <h1 class="profile__title">Информация об авторе</h1>
-          <img
-            src="assets/images/account-photo.jpg"
-            alt="Фото автора"
-            class="profile__photo"
-          />
-          <h2 class="profile__name">Пучко Денис Вадимович</h2>
-          <p class="profile__group">ЭФБО-02-24</p>
-        </article>
-        
-        <section class="about">
-          <h2 class="about__title">Обо мне</h2>
-          <p class="about__text">Обо мне: Я родился в Самаре. Ходил. Бродил. Оп в Москве. Хожу теперь тут.</p>
-        </section>
-        
-        <section class="skills">
-          <h2 class="skills__title">Мои навыки</h2>
-          <div class="skills__grid">
-            <div class="skill-tag">Разработка кроссплатформенных приложений на Flutter (Dart)</div>
-            <div class="skill-tag">Backend-разработка на C# и .NET</div>
-            <div class="skill-tag">Работа с базами данных</div>
-            <div class="skill-tag">Системы контроля версий и CI/CD</div>
-          </div>
-        </section>
-        
-        <section class="experience">
-          <article class="profile">
-            <h2 class="section__title">Мой опыт работы</h2>
-          </article>
-          <div class="experience__grid">
-            <div class="experience-card">
-              <h3 class="experience-card__title">Разработчик мобильных приложений (Flutter)</h3>
-              <p class="experience-card__desc">Полный цикл разработки с нуля двух кроссплатформенных приложений для стартапов, которые были успешно опубликованы в AppStore и Google Play.</p>
+    <script src="js/theme.js"></script>
+</head>
+<body class="bg-light">
+    <div class="container-fluid p-0">
+        <!-- Header -->
+        <header class="bg-primary text-white py-3">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col">
+                        <h2 class="h4 mb-0">Хэдер</h2>
+                    </div>
+                    <div class="col-auto">
+                        <button class="btn btn-outline-light btn-sm" onclick="toggleTheme()">🌙</button>
+                    </div>
+                </div>
             </div>
-            <div class="experience-card">
-              <h3 class="experience-card__title">Fullstack Developer (C# / .NET + Flutter)</h3>
-              <p class="experience-card__desc">Разработка и поддержка backend-части на ASP.NET Core для внутренней системы управления предприятием, включая проектирование API и работу с базой данных MS SQL.</p>
+        </header>
+
+        <!-- Navigation -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="index.html">Главная</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./pages/news.html">Новости</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./pages/practices.html">Практики</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./pages/goods.html">Товары</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./pages/contacts.html">Контакты</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-            <div class="experience-card">
-              <h3 class="experience-card__title">Стажер-программист C#</h3>
-              <p class="experience-card__desc">Участие в разработке модулей для десктопного приложения на WPF.</p>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="container my-4">
+            <!-- Profile Section -->
+            <section class="mb-5">
+                <div class="card shadow-sm">
+                    <div class="card-body p-4">
+                        <div class="row align-items-center">
+                            <div class="col-md-3 text-center mb-3 mb-md-0">
+                                <img src="assets/images/account-photo.jpg" alt="Фото автора" 
+                                     class="img-fluid rounded-circle" style="width: 150px; height: 150px; object-fit: cover;">
+                            </div>
+                            <div class="col-md-9">
+                                <h1 class="card-title h4 text-primary">Пучко Денис Вадимович</h1>
+                                <p class="card-text text-muted mb-2">
+                                    <i class="bi bi-bookmark-check-fill text-primary"></i>
+                                    ЭФБО-02-24
+                                </p>
+                                <div class="d-flex gap-2 flex-wrap">
+                                    <span class="badge bg-primary">Flutter</span>
+                                    <span class="badge bg-success">C#/.NET</span>
+                                    <span class="badge bg-info">Базы данных</span>
+                                    <span class="badge bg-warning">CI/CD</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- About Section -->
+            <section class="mb-5">
+                <div class="card shadow-sm">
+                    <div class="card-header bg-light">
+                        <h3 class="card-title h5 mb-0">
+                            <i class="bi bi-person-circle text-primary"></i>
+                            Обо мне
+                        </h3>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">
+                            Обо мне: Я родился в Самаре. Ходил. Бродил. Оп в Москве. Хожу теперь тут.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Skills Section -->
+            <section class="mb-5">
+                <div class="card shadow-sm">
+                    <div class="card-header bg-light">
+                        <h3 class="card-title h5 mb-0">
+                            <i class="bi bi-tools text-primary"></i>
+                            Мои навыки
+                        </h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="row g-2">
+                            <div class="col-12 col-md-6">
+                                <span class="badge bg-primary p-2 w-100 mb-2">Разработка кроссплатформенных приложений на Flutter (Dart)</span>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <span class="badge bg-success p-2 w-100 mb-2">Backend-разработка на C# и .NET</span>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <span class="badge bg-info p-2 w-100 mb-2">Работа с базами данных</span>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <span class="badge bg-warning p-2 w-100 mb-2">Системы контроля версий и CI/CD</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Experience Section -->
+            <section class="mb-5">
+                <div class="card shadow-sm">
+                    <div class="card-header bg-light">
+                        <h3 class="card-title h5 mb-0">
+                            <i class="bi bi-briefcase text-primary"></i>
+                            Мой опыт работы
+                        </h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="row g-3">
+                            <div class="col-md-4">
+                                <div class="card h-100 border-primary">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-primary">Разработчик мобильных приложений (Flutter)</h5>
+                                        <p class="card-text small text-muted">
+                                            Полный цикл разработки с нуля двух кроссплатформенных приложений для стартапов, которые были успешно опубликованы в AppStore и Google Play.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card h-100 border-success">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-success">Fullstack Developer (C# / .NET + Flutter)</h5>
+                                        <p class="card-text small text-muted">
+                                            Разработка и поддержка backend-части на ASP.NET Core для внутренней системы управления предприятием, включая проектирование API и работу с базой данных MS SQL.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card h-100 border-info">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-info">Стажер-программист C#</h5>
+                                        <p class="card-text small text-muted">
+                                            Участие в разработке модулей для десктопного приложения на WPF.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="bg-dark text-white py-4 mt-5">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <p class="mb-0">&copy; 2025 Все права защищены.</p>
+                    </div>
+                </div>
             </div>
-          </div>        
-        </section>
-      </main>
-      
-      <footer class="footer">
-        <p class="footer__text">© 2025 Все права защищены.</p>
-      </footer>
+        </footer>
     </div>
-  </body>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
 </html>
