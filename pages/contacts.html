@@ -118,7 +118,7 @@
             </div>
 
             <div class="dialog__actions">
-              <button type="submit" class="btn btn--secondary">Отмена</button>
+              <button type="submit" class="btn btn--secondary" onclick="cancel()">Отмена</button>
               <button type="button" class="btn btn--primary" onclick="submitForm()">Отправить</button>
             </div>
           </form>
@@ -161,6 +161,12 @@
             event.preventDefault();
           }
         });
+
+        function cancel(){
+          const form = document.getElementById('feedbackForm');
+          contactDialog.close();
+          form.reset();
+        }
       </script>
     </div>
   </body>
